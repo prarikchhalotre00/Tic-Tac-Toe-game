@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+  padding: 20px;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 2.4rem;
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+#status {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #ffe66d;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.cell {
+  width: 100%;
+  aspect-ratio: 1;
+  border: none;
+  border-radius: 12px;
+  background: #f4f7fb;
+  color: #141e30;
+  font-size: clamp(2rem, 10vw, 3rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.cell:hover {
+  background: #d5f8ff;
+  transform: scale(1.04);
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+}
+
+#restart {
+  border: none;
+  border-radius: 30px;
+  padding: 12px 28px;
+  background: #00e5ff;
+  color: #141e30;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#restart:hover {
+  background: #ffe66d;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 400px) {
+  .game-container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.player-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.player-setup label {
+  text-align: left;
+  font-size: 0.95rem;
+  color: #ffe66d;
+  font-weight: bold;
+}
+
+.player-setup input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.player-setup input:focus {
+  border-color: #00e5ff;
+}
+
+#startGame,
+#changePlayers {
+  border: none;
+  border-radius: 25px;
+  padding: 12px 20px;
+  margin-top: 8px;
+  background: #ffe66d;
+  color: #141e30;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startGame:hover,
+#changePlayers:hover {
+  background: #00e5ff;
+  transform: translateY(-2px);
+}
+
+#changePlayers {
+  background: #ffffff;
+  margin-left: 5px;
+}
+
+[hidden] {
+  display: none !important;
+}

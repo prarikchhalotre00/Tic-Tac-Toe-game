@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Tic Tac Toe</h1>
+      <p class="subtitle">Challenge your friend!</p>
+
+      <div class="player-setup" id="playerSetup">
+        <label for="playerX">Player X Name</label>
+        <input
+          type="text"
+          id="playerX"
+          placeholder="Enter first player's name"
+        />
+
+        <label for="playerO">Player O Name</label>
+        <input
+          type="text"
+          id="playerO"
+          placeholder="Enter second player's name"
+        />
+
+        <button id="startGame">Start Game</button>
+      </div>
+
+      <div id="gameArea" hidden>
+        <h2 id="status">Player X's Turn</h2>
+
+        <div class="game-board" id="board">
+          <button class="cell" aria-label="Cell 1"></button>
+          <button class="cell" aria-label="Cell 2"></button>
+          <button class="cell" aria-label="Cell 3"></button>
+          <button class="cell" aria-label="Cell 4"></button>
+          <button class="cell" aria-label="Cell 5"></button>
+          <button class="cell" aria-label="Cell 6"></button>
+          <button class="cell" aria-label="Cell 7"></button>
+          <button class="cell" aria-label="Cell 8"></button>
+          <button class="cell" aria-label="Cell 9"></button>
+        </div>
+
+        <button id="restart">Restart Round</button>
+        <button id="changePlayers">Change Players</button>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
